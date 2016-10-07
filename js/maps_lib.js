@@ -39,8 +39,8 @@ var MapsLib = {
   locationScope:      "",      //geographical area appended to all address searches
   recordName:         "result",       //for showing number of results
   recordNamePlural:   "results",
-
-
+  
+  
   searchRadius:       805,            //in meters ~ 1/2 mile
   defaultZoom:        5,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png', // set to empty '' to hide searched address marker
