@@ -24,7 +24,7 @@ var MapsLib = {
   fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers
 
   polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
-  polygon2TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //US Region Boundaries
+  polygon2TableID:    "1_Uz6Rn_4MT2FGN8jJz49yM-duzHCKZvC7QQwtcs6", //US Region Boundaries
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
