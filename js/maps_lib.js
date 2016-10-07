@@ -33,7 +33,7 @@ var MapsLib = {
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "Address",
+  locationColumn:     "Latitude",
 
   map_centroid:       new google.maps.LatLng(46.821677,-97.448730), //center that your map defaults to
   locationScope:      "",      //geographical area appended to all address searches
@@ -157,6 +157,8 @@ var MapsLib = {
     if ( $("#cbType15").is(':checked')) searchType += "15,";
     if ( $("#cbType16").is(':checked')) searchType += "16,";
     if ( $("#cbType17").is(':checked')) searchType += "17,";
+    if ( $("#cbType18").is(':checked')) searchType += "18,";
+    if ( $("#cbType19").is(':checked')) searchType += "19,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
