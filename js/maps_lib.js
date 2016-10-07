@@ -21,28 +21,28 @@ var MapsLib = {
 
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be deprecated soon
-  fusionTableId:      "1FMjVRb16OqlkeodL7onaQ5A7jamtpSY0TmHaa-WQ", // Point layer of CT schools
+  fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers
 
-  polygon1TableID:    "1J4icqZYUUWrjbd5QrlJWBv9Ax5LeV745AnWhNTl3", //Median Household Income in CT Towns, ACS est 2008-12
-  polygon2TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
+  polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
+  polygon2TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //US Region Boundaries
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
-  googleApiKey:       "AIzaSyDIevSvpV-ONb4Pf15VUtwyr_zZa7ccwq4",
+  googleApiKey:       "AIzaSyD8JmBwSHPBhx6T2eD22SPube_68ndGIBY",
 
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
   locationColumn:     "Address",
 
-  map_centroid:       new google.maps.LatLng(41.7682,-72.684), //center that your map defaults to
-  locationScope:      "connecticut",      //geographical area appended to all address searches
+  map_centroid:       new google.maps.LatLng(46.821677,-97.448730), //center that your map defaults to
+  locationScope:      "",      //geographical area appended to all address searches
   recordName:         "result",       //for showing number of results
   recordNamePlural:   "results",
 
 
   searchRadius:       805,            //in meters ~ 1/2 mile
-  defaultZoom:        12,             //zoom level when map is loaded (bigger is more zoomed in)
+  defaultZoom:        5,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png', // set to empty '' to hide searched address marker
   currentPinpoint:    null,
 
@@ -138,13 +138,25 @@ var MapsLib = {
     //-----custom filters-------
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
-    var type_column = "'TypeNum'";
+    var type_column = "'SearchType2'";
     var searchType = type_column + " IN (-1,";
     if ( $("#cbType1").is(':checked')) searchType += "1,";
     if ( $("#cbType2").is(':checked')) searchType += "2,";
     if ( $("#cbType3").is(':checked')) searchType += "3,";
     if ( $("#cbType4").is(':checked')) searchType += "4,";
     if ( $("#cbType5").is(':checked')) searchType += "5,";
+    if ( $("#cbType6").is(':checked')) searchType += "6,";
+    if ( $("#cbType7").is(':checked')) searchType += "7,";
+    if ( $("#cbType8").is(':checked')) searchType += "8,";
+    if ( $("#cbType9").is(':checked')) searchType += "9,";
+    if ( $("#cbType10").is(':checked')) searchType += "10,";
+    if ( $("#cbType11").is(':checked')) searchType += "11,";
+    if ( $("#cbType12").is(':checked')) searchType += "12,";
+    if ( $("#cbType13").is(':checked')) searchType += "13,";
+    if ( $("#cbType14").is(':checked')) searchType += "14,";
+    if ( $("#cbType15").is(':checked')) searchType += "15,";
+    if ( $("#cbType16").is(':checked')) searchType += "16,";
+    if ( $("#cbType17").is(':checked')) searchType += "17,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
