@@ -24,7 +24,7 @@ var MapsLib = {
   fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers
 
   polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
-  polygon2TableID:    "1_Uz6Rn_4MT2FGN8jJz49yM-duzHCKZvC7QQwtcs6", //US Region Boundaries
+  polygon2TableID:    "12ceIVuy0Bj5gAFH9eyLrvaF0WTmf429ORz97Vatg", //US Region Boundaries
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -53,12 +53,12 @@ var MapsLib = {
     var myOptions = {
       zoom: MapsLib.defaultZoom,
       center: MapsLib.map_centroid,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeId: google.maps.MapTypeId.terrain,
       styles: [
         {
           stylers: [
-            { saturation: -100 }, // MODIFY Saturation and Lightness if needed
-            { lightness: 40 }     // Current values make thematic polygon shading stand out over base map
+            { saturation: 0 }, // MODIFY Saturation and Lightness if needed
+            { lightness: 0 }     // Current values make thematic polygon shading stand out over base map
           ]
         }
       ]
@@ -233,7 +233,6 @@ var MapsLib = {
     if (MapsLib.searchRadiusCircle != null)
       MapsLib.searchRadiusCircle.setMap(null);
   },
-
   setDemographicsLabels: function(left, middle, right) {
     $('#legend-left').fadeOut('fast', function(){
       $("#legend-left").html(left);
@@ -245,7 +244,7 @@ var MapsLib = {
       $("#legend-right").html(right);
     }).fadeIn('fast');
   },
-
+  
   findMe: function() {
     // Try W3C Geolocation (Preferred)
     var foundLocation;
