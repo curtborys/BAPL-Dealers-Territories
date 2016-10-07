@@ -24,7 +24,7 @@ var MapsLib = {
   fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers
 
   polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
-  polygon2TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //US Region Boundaries
+  polygon2TableID:    "1_Uz6Rn_4MT2FGN8jJz49yM-duzHCKZvC7QQwtcs6", //US Region Boundaries
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -33,7 +33,7 @@ var MapsLib = {
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "Address",
+  locationColumn:     "Latitude",
 
   map_centroid:       new google.maps.LatLng(46.821677,-97.448730), //center that your map defaults to
   locationScope:      "",      //geographical area appended to all address searches
@@ -157,6 +157,8 @@ var MapsLib = {
     if ( $("#cbType15").is(':checked')) searchType += "15,";
     if ( $("#cbType16").is(':checked')) searchType += "16,";
     if ( $("#cbType17").is(':checked')) searchType += "17,";
+    if ( $("#cbType18").is(':checked')) searchType += "18,";
+    if ( $("#cbType19").is(':checked')) searchType += "19,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
