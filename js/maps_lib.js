@@ -104,7 +104,7 @@ var MapsLib = {
     $("#result_box").hide();
 
     //-----custom initializers-------
-      $("#rbPolygonOFF").attr("checked", "checked");
+      $("#rbPolygonOff").attr("checked", "checked");
     //-----end of custom initializers-------
 
     //run the default search
