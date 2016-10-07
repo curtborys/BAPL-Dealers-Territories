@@ -91,8 +91,8 @@ var MapsLib = {
         from:   MapsLib.polygon2TableID,
         select: "geometry"
       },
-      styleId: 2,
-      templateId: 2
+      styleId: 1,
+      templateId: 1
     });
 
     //reset filters
