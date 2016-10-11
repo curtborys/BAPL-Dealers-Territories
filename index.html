@@ -168,6 +168,12 @@
                 US - Vacant/Other
               </label>
             </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' onClick="toggle(this)" id='cbType20' />
+                Select All
+              </label>
+            </li>
           </ul>
           <!--MODIFY Polygon layers legend heading, labels (such as Polygon layer 1) to match your data, and related items in maps_lib.js file -->
           <h4>Territories</h4>
@@ -182,7 +188,7 @@
             </ol>
             <li>
               <label class='radio inline'>
-                <input type='radio' name='types' id='rbPolygon1' /><!--MODIFY to remove default checked button-->
+                <input type='radio' name='types' id='rbPolygon1' />
                 Canadian Territories
               </label>
             </li>
@@ -194,7 +200,7 @@
             </li>
             <li>
               <label class='radio inline'>
-                <input type='radio' name='types' id='rbPolygonOff' checked />
+                <input type='radio' name='types' id='rbPolygonOff' checked /><!--MODIFY to remove default checked button-->
                 Off
               </label>
             </li>
