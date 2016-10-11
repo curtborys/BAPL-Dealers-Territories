@@ -20,7 +20,11 @@ a:hover { color: #4B58A6; }
 .filter-red { background-color: #FB6353; }
 
 /* remove markers before unordered list */
-ul.unstyled {list-style-type:none;}
+ul.unstyled {list-style-type:none;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
 /* blocking and spacing for polygon list*/
 .radio {display:inline-block; margin-top: 0px; margin-bottom: 0px;} 
 
