@@ -22,6 +22,7 @@ a:hover { color: #4B58A6; }
 /* remove markers before unordered list */
 ul.unstyled {list-style-type:none;}
 ul.list-columns {
+list-style-type:none;  
 -moz-column-count: 2;
 -moz-column-gap: 10px;
 -webkit-column-count: 2;
