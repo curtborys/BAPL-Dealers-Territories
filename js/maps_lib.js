@@ -157,6 +157,12 @@ var MapsLib = {
     if ( $("#cbType18").is(':checked')) searchType += "18,";
     if ( $("#cbType19").is(':checked')) searchType += "19,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+    
+    var type_column = "'SearchType3'";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbType20").is(':checked')) searchType += "1,";
+    if ( $("#cbType21").is(':checked')) searchType += "2,";    
+        whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
     if (address != "") {
