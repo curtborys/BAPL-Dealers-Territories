@@ -21,6 +21,14 @@ a:hover { color: #4B58A6; }
 
 /* remove markers before unordered list */
 ul.unstyled {list-style-type:none;}
+ul.list-columns {
+-moz-column-count: 2;
+-moz-column-gap: 10px;
+-webkit-column-count: 2;
+-webkit-column-gap: 10px;
+column-count: 2;
+column-gap: 10px;
+}
 /* blocking and spacing for polygon list*/
 .radio {display:inline-block; margin-top: 0px; margin-bottom: 0px;} 
 
