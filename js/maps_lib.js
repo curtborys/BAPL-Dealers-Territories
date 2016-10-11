@@ -155,10 +155,7 @@ var MapsLib = {
     if ( $("#cbType16").is(':checked')) searchType += "16,";
     if ( $("#cbType17").is(':checked')) searchType += "17,";
     if ( $("#cbType18").is(':checked')) searchType += "18,";
-    if ( $("#cbType19").is(':checked')) searchType += "19,";
-    if ( $("#cbType20").is(':checked')) searchType += "1,2,3,4,5,";
-    if ( $("#cbType21").is(':checked')) searchType += "6,7,,8,9,10,11,12,13,14,15,16,17,18,19,";
-    if ( $("#cbType22").is(':checked')) searchType += "1,2,3,4,5,6,7,,8,9,10,11,12,13,14,15,16,17,18,19";
+    if ( $("#cbType19").is(':checked')) searchType += "19";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
