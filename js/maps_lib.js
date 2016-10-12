@@ -95,6 +95,15 @@ var MapsLib = {
       styleId: 3,
       templateId: 6
     });
+    
+    MapsLib.polygon3 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon3TableID,
+        select: "'City, State'"
+      },
+      styleId: 2,
+      templateId: 2
+    });    
 
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
