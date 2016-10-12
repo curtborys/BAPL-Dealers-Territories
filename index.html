@@ -194,35 +194,31 @@
 </div>
 </div>
           <!--MODIFY Polygon layers legend heading, labels (such as Polygon layer 1) to match your data, and related items in maps_lib.js file -->
-          <h4>Territories</h4>
-            <div class='clear'></div>
-            <ul class='inputs-list unstyled'>
-            <ol id='polygon-legend'>
-              <!--
-              <li id='legend-left'></li>
-              <li id='legend-middle'></li>
-              <li id='legend-right'></li>
-              -->
-            </ol>
-            <li>
-              <label class='radio inline'>
-                <input type='radio' name='types' id='rbPolygon1' />
-                Canadian Territories
-              </label>
-            </li>
-            <li>
-              <label class='radio inline'>
-                <input type='radio' name='types' id='rbPolygon2' />
-                US Territories
-              </label>
-            </li>
-            <li>
-              <label class='radio inline'>
-                <input type='radio' name='types' id='rbPolygonOff' checked /><!--MODIFY to remove default checked button-->
-                Off
-              </label>
-            </li>
-          </ul>
+	<div class="divTable" style="width: 70%;">
+		<div class="divTableBody">
+			<div class="divTableRow">
+			<div class="divTableCell">Territories</div>
+			<div class="divTableCell">US Expansion Targets</div>
+		</div>
+			<div class="divTableRow">
+			<div class="divTableCell">
+			<div class="clear">
+			<ul class="inputs-list unstyled">
+				<li><label class="radio inline"> <input id="rbPolygon1" name="types" type="radio" /> Canadian Territories </label></li>
+				<li><label class="radio inline"> <input id="rbPolygon2" name="types" type="radio" /> US Territories </label></li>
+				<li><label class="radio inline"> <input id="rbPolygonOff" checked="checked" name="types" type="radio" /><!--MODIFY to remove default checked button--> Off </label></li>
+			</ul>
+		</div>
+	</div>
+			<div class="divTableCell">
+				<ul class="inputs-list unstyled">
+				<li><label class="radio inline"> <input id="rbPolygon3" name="types" type="radio" />Target AG Dealers</label></li>
+				<li><label class="radio inline"> <input id="rbPolygonOff" checked="checked" name="types" type="radio" /><!--MODIFY to remove default checked button--> Off </label></li>
+			</ul>
+			</div>
+		</div>
+		</div>
+	</div>
           <br />
           <a class='btn btn-primary' id='search' href='#'>
             <i class='glyphicon glyphicon-search'></i>
