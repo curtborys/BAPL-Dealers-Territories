@@ -136,10 +136,7 @@ var MapsLib = {
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
     }
-    if ($("#rbPolygon3").is(':checked')) {
-      MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
-    }     
+ 
 
     var address = $("#search_address").val();
     MapsLib.searchRadius = $("#search_radius").val();
