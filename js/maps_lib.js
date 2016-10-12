@@ -115,7 +115,6 @@ var MapsLib = {
 
     //-----custom initializers-------
       $("#rbPolygonOff").attr("checked", "checked");
-      $("#rbPolygonOff1).attr("checked", "checked");    
     //-----end of custom initializers-------
 
     //run the default search
@@ -140,10 +139,7 @@ var MapsLib = {
     if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
       MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
-    }    
-    if ($("#rbPolygonOff1").is(':checked')) {   //the Off statement does not contain a setMap
-      MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
-    }   
+    }     
 
     var address = $("#search_address").val();
     MapsLib.searchRadius = $("#search_radius").val();
