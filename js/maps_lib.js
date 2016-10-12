@@ -95,7 +95,15 @@ var MapsLib = {
       styleId: 3,
       templateId: 6
     });
-    
+
+    MapsLib.polygon3 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon3TableID,
+        select: "geometry"
+      },
+      styleId: 2,
+      templateId: 2
+    });
 
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
@@ -107,6 +115,7 @@ var MapsLib = {
 
     //-----custom initializers-------
       $("#rbPolygonOff").attr("checked", "checked");
+      $("#rbPolygonOff1).attr("checked", "checked");    
     //-----end of custom initializers-------
 
     //run the default search
@@ -128,6 +137,13 @@ var MapsLib = {
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
     }
+    if ($("#rbPolygon3").is(':checked')) {
+      MapsLib.polygon3.setMap(map);
+      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+    }    
+    if ($("#rbPolygonOff1).is(':checked')) {   //the Off statement does not contain a setMap
+      MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
+    }    
 
     var address = $("#search_address").val();
     MapsLib.searchRadius = $("#search_radius").val();
