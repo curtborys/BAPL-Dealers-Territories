@@ -81,7 +81,7 @@ var MapsLib = {
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
       query: {
         from:   MapsLib.polygon1TableID,
-        select: "geometry"
+        select: "Boundary"
       },
       styleId: 2,
       templateId: 2
@@ -90,7 +90,7 @@ var MapsLib = {
     MapsLib.polygon2 = new google.maps.FusionTablesLayer({
       query: {
         from:   MapsLib.polygon2TableID,
-        select: "geometry"
+        select: "Boundary"
       },
       styleId: 3,
       templateId: 6
