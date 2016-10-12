@@ -58,7 +58,15 @@
           <h4>
             Dealers by Territory Manager
           </h4>
-          <ul class='inputs-list unstyled'>
+<div class="divTable" style="width: 100%;">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">Canadian Territories</div>
+<div class="divTableCell">US Territories</div>
+</div>
+<div class="divTableRow">
+	<div class="divTableCell">
+<ul class='inputs-list unstyled'>
             <li>
               <label class='checkbox inline'>
                 <input type='checkbox' name='canada[]' id='cbType1' />
@@ -94,7 +102,11 @@
                 <input type='checkbox' id='cbType20' />
                 Canada
               </label>
-            </li>            
+            </li>  	
+  </ul>
+  	</div>
+	<div class="divTableCell">
+      <ul class='inputs-list unstyled'>
             <li>
               <label class='checkbox inline'>
                 <input type='checkbox' name='us[]' id='cbType6' />
@@ -179,7 +191,12 @@
                 US
               </label>
             </li>  
-          </ul>
+          </ul>  	
+  	</div>
+</div>
+</div>
+</div>
+
           <!--MODIFY Polygon layers legend heading, labels (such as Polygon layer 1) to match your data, and related items in maps_lib.js file -->
           <h4>Territories</h4>
             <div class='clear'></div>
