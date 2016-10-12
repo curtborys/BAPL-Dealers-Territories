@@ -26,15 +26,12 @@
         <a class='navbar-brand' href='index.html'>BAPL Dealers and Territories</a>
       </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class='active'>MAP</li>
-        </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
   <div class='container-fluid'>
     <div class='row'>
-      <div class='col-md-4'>
+      <div class='col-md-3'>
         <div class='well'>
           <h4>
             Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -46,10 +43,10 @@
             <label>
               within
                 <select id='search_radius'>
-                  <option value='1610'>1 mile</option>
-                  <option value='16095'>10 miles</option>
+                  <option value='16095'>10 mile</option>
                   <option value='40235'>25 miles</option>
                   <option value='80470'>50 miles</option>
+                  <option value='160935'>100 miles</option>
                 </select>
             </label>
           </p>
@@ -58,116 +55,144 @@
           <h4>
             Dealers by Territory Manager
           </h4>
-          <ul class='inputs-list unstyled'>
+<div class="divTable" style="width: 100%;">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">US</div>
+<div class="divTableCell">Canada</div>
+</div>
+<div class="divTableRow">
+	<div class="divTableCell">
+      <ul class='inputs-list unstyled'>
             <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType1' />
-                Canada - Jason Bouchard
-              </label>
-            </li>
-            <li>
-              <label class='checkbox inline'>
-                <input type='checkbox' id='cbType2' />
-                Canada - Mat Ewanchuk
-              </label>
-            </li>
-            <li>
-              <label class='checkbox inline'>
-                <input type='checkbox' id='cbType3' />
-                Canada - Chris Hodgins
-              </label>
-            </li>
-            <li>
-              <label class='checkbox inline'>
-                <input type='checkbox' id='cbType4' />
-                Canada - John McArthur
-              </label>
-            </li>
-            <li>
-              <label class='checkbox inline'>
-                <input type='checkbox' id='cbType5' />
-                Canada - Tim Ruether
-              </label>
-            </li>
-            <li>
-              <label class='checkbox inline'>
-                <input type='checkbox' id='cbType6' />
-                US - Thayne Barker
+                <input type='checkbox' name='us[]' id='cbType6' />
+               Thayne Barker
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType7' />
-                US - James Hendrix
+                <input type='checkbox' name='us[]' id='cbType7' />
+                James Hendrix
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType8' />
-                US - Jared Mack
+                <input type='checkbox' name='us[]' id='cbType8' />
+                Jared Mack
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType9' />
-                US - Robert Neal
+                <input type='checkbox' name='us[]' id='cbType9' />
+                Robert Neal
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType10' />
-                US - Bubba Peterson
+                <input type='checkbox' name='us[]' id='cbType10' />
+               Bubba Peterson
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType11' />
-                US - Dave Norheim
+                <input type='checkbox' name='us[]' id='cbType11' />
+               Dave Norheim
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType12' />
-                US - Alan Schneider
+                <input type='checkbox' name='us[]' id='cbType12' />
+                Alan Schneider
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType14' />
-                US - Jerry Vendsel
+                <input type='checkbox' name='us[]' id='cbType14' />
+                Jerry Vendsel
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType15' />
-               US - Matt Volkmar
+                <input type='checkbox' name='us[]' id='cbType15' />
+               Matt Volkmar
               </label>
             </li>
              <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType16' />
-                US - Joe Wetzel
+                <input type='checkbox' name='us[]' id='cbType16' />
+                Joe Wetzel
               </label>
             </li>
             <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType17' />
-                US - Clint Stocklin
+                <input type='checkbox' name='us[]' id='cbType17' />
+               Clint Stocklin
               </label>
             </li>
                         <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType18' />
-                US - TX/OK
+                <input type='checkbox' name='us[]' id='cbType18' />
+               TX/OK
               </label>
             </li>
             <li>
               <label class='checkbox inline'>
-                <input type='checkbox' id='cbType19' />
-                US - Vacant/Other
+                <input type='checkbox' name='us[]' id='cbType19' />
+                Vacant/Other
               </label>
             </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType21' />
+                All US
+              </label>
+            </li>  
           </ul>
+  	</div>
+	<div class="divTableCell">
+<ul class='inputs-list unstyled'>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' name='canada[]' id='cbType1' />
+               Jason Bouchard
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' name='canada[]' id='cbType2' />
+               Mat Ewanchuk
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' name='canada[]' id='cbType3' />
+               Chris Hodgins
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' name='canada[]' id='cbType4' />
+               John McArthur
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' name='canada[]' id='cbType5' />
+               Tim Ruether
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType20' />
+                All Canada
+              </label>
+            </li>  	
+  </ul>
+  	</div>
+</div>
+</div>
+</div>
           <!--MODIFY Polygon layers legend heading, labels (such as Polygon layer 1) to match your data, and related items in maps_lib.js file -->
           <h4>Territories</h4>
             <div class='clear'></div>
@@ -210,7 +235,7 @@
         </div>
         <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
       </div>
-      <div class='col-md-8'>
+      <div class='col-md-9'>
         <noscript>
           <div class='alert alert-info'>
             <h4>Your JavaScript is disabled</h4>
@@ -276,9 +301,13 @@
           $('#search').click();
           return false;
         }
-      });
+      }); 
     });
     //]]>
     </script>
   </body>
   </html>
+
+       
+
+
