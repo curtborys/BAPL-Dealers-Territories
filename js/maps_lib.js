@@ -25,6 +25,7 @@ var MapsLib = {
 
   polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
   polygon2TableID:    "1gP27ZuU4u4DYXo2EEIHw_kQZg7rNAP9Rrk8EhgeI", //US Region Boundaries
+  polygon3TableID:    "1BEt2ZpTNlTyyvqJqMDiUB2o4HXBnfPxE4kKC7oee", //US JD Target Dealers
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -94,6 +95,15 @@ var MapsLib = {
       styleId: 3,
       templateId: 6
     });
+    
+    MapsLib.polygon3 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon3TableID,
+        select: "geometry"
+      },
+      styleId: 2,
+      templateId: 2
+    });    
 
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
@@ -105,6 +115,7 @@ var MapsLib = {
 
     //-----custom initializers-------
       $("#rbPolygonOff").attr("checked", "checked");
+      $("#rbPolygonOff1").attr("checked", "checked");
     //-----end of custom initializers-------
 
     //run the default search
