@@ -168,9 +168,9 @@ var MapsLib = {
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     var type_column = "'BAPL Sales'";
-    var tempWhereClause = [];
+    var tempWhereClause = type_column + " IN (-1,";
     if ( $("#cbType22").is(':checked')) tempWhereClause.push("No");
-    tempWhereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";    
+    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";    
    
     //-------end of custom filters--------
 
