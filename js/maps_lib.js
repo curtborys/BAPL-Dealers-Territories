@@ -164,13 +164,9 @@ var MapsLib = {
     var type_column = "'SearchType3'";
     var searchType = type_column + " IN (-1,";
     if ( $("#cbType20").is(':checked')) searchType += "1,";
-    if ( $("#cbType21").is(':checked')) searchType += "2,";    
+    if ( $("#cbType21").is(':checked')) searchType += "2,";
+    if ( $("#cbType22").is(':checked')) searchType += "3,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
-
-    var type_column = "'BAPL Sales'";
-    var tempWhereClause = type_column + " IN (-1,";
-    if ( $("#cbType22").is(':checked')) tempWhereClause.push("'No'");
-    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";    
    
     //-------end of custom filters--------
 
