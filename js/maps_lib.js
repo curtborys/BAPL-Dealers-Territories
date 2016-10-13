@@ -169,7 +169,7 @@ var MapsLib = {
 
     var type_column = "'BAPL Sales'";
     var tempWhereClause = type_column + " IN (-1,";
-    if ( $("#cbType22").is(':checked')) tempWhereClause.push("No,");
+    if ( $("#cbType22").is(':checked')) tempWhereClause.push("'No'");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";    
    
     //-------end of custom filters--------
