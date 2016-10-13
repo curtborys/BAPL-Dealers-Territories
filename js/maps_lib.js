@@ -21,11 +21,10 @@ var MapsLib = {
 
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be deprecated soon
-  fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers
+  fusionTableId:      "1khnYe_-YlyR-MZ5tMUeE7TNRxHDiqJWxyG5vLhyb", // Point layer of BAPL Dealers and Prospects
 
   polygon1TableID:    "1LjrrpEWKluFJm7r3H2hF0LhQw0Lq7Pd0tsWogJp6", //Canadian Territory Boundaries
   polygon2TableID:    "1gP27ZuU4u4DYXo2EEIHw_kQZg7rNAP9Rrk8EhgeI", //US Region Boundaries
-  polygon3TableID:    "1BEt2ZpTNlTyyvqJqMDiUB2o4HXBnfPxE4kKC7oee", //US JD Target Dealers
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -165,6 +164,11 @@ var MapsLib = {
     var searchType = type_column + " IN (-1,";
     if ( $("#cbType20").is(':checked')) searchType += "1,";
     if ( $("#cbType21").is(':checked')) searchType += "2,";    
+        whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+    
+        var type_column = "'BAPL Sales'";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbType22").is(':checked')) searchType += "No,"; 
         whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
    
     //-------end of custom filters--------
