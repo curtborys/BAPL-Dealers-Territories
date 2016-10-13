@@ -166,7 +166,7 @@ var MapsLib = {
     if ( $("#cbType21").is(':checked')) searchType += "2,";    
         whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     
-    var type_column = "'BAPL Sales'";
+    var type_column = "'BAPLSales'";
     var searchType = type_column + " IN (-1,";
     if ( $("#cbType22").is(':checked')) searchType += "2,"; 
         whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
