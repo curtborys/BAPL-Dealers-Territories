@@ -168,7 +168,7 @@ var MapsLib = {
     
     var type_column = "'BAPL Sales'";
     var searchType = type_column + " IN (-1,";
-    if ( $("#cbType22").is(':checked')) searchType += "'No',"; 
+    if ( $("#cbType22").is(':checked')) searchType += "2,"; 
         whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
    
     //-------end of custom filters--------
