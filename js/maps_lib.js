@@ -165,7 +165,12 @@ var MapsLib = {
     if ( $("#cbType20").is(':checked')) searchType += "1,";
     if ( $("#cbType21").is(':checked')) searchType += "2,";    
         whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
-
+        
+    var type_column = "'BAPLSales'";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbType23").is(':checked')) searchType += "1,";    
+    if ( $("#cbType22").is(':checked')) searchType += "2,"; 
+        whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
    
     //-------end of custom filters--------
 
