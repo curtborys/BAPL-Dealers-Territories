@@ -106,7 +106,6 @@ var MapsLib = {
 
     //-----custom initializers-------
       $("#rbPolygonOff").attr("checked", "checked");
-      $('#cbType22').removeAttr('checked');
     //-----end of custom initializers-------
 
     //run the default search
